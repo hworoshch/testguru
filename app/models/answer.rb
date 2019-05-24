@@ -1,6 +1,6 @@
 class Answer < ApplicationRecord
 
   belongs_to :question
-  balongs_to :user
+  belongs_to :user
 
 end
