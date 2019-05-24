@@ -1,6 +1,7 @@
 class User < ApplicationRecord
 
   has_many :answers
+  has_meny :tests
 
   def tests_by_level(level)
     answers = Answer.where('user_id = ?', self.id)
