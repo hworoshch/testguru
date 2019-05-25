@@ -4,8 +4,9 @@ class Test < ApplicationRecord
   has_many :tests_users
   has_many :users, through: :tests_users
 
-  def self.find_by_category(category_title)
-    category = Category.find_by(title: category_title)
-    category.tests.order(title: :desc).pluck(:title)
-  end
+  scope :level, -> (level) { where(level: level) }
+  scope :easy, -> { level(0..1) }
+  scope :medium, -> { level(2..4) }
+  scope :hard, -> { level(5..Float::INFINITY) }
+  scope :by_category, -> (category_title) { joins(:category).where(categories: { title: category_title }) }
 end
