@@ -1,0 +1,8 @@
+=form_for([@test, @question]) do |f|
+  = render 'errors', object: @question
+  = f.hidden_field :test_id, value: @test.id
+  p
+    = f.label :body
+    = f.text_area :body
+  = f.submit
+

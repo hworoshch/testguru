@@ -1,2 +1,4 @@
-p
-  =link_to question.body, question_path(question)
+tr
+  td = link_to question.body, test_question_path(question.test, question)
+  td = link_to 'Edit', edit_test_question_path(question.test, question)
+  td = link_to 'Delete', test_question_path(question.test, question), method: :delete, data: { confirm: 'Are you sure?' }
