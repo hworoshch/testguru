@@ -1,2 +1,15 @@
-h1 Tests
-=render @tests
+h1 All tests
+table
+  thead
+    tr
+      th Category
+      th Title
+      th Level
+      th Questions
+      th
+      th
+  tbody
+    = render @tests
+hr
+= link_to 'Add new test', new_test_path
+
