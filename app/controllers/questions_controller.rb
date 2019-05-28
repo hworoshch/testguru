@@ -1,22 +1,23 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, only: [:new, :edit]
+  before_action :find_test, only: [:new]
   before_action :find_question, only: [:show, :edit, :update, :destroy]
-  #rescue_from StandardError, with: :not_found
+  before_action :next_question
 
   def show
   end
 
   def new
-    @question = Question.new
+    @question = @test.questions.new
   end
 
   def edit
+    @test = Test.find(@question.test_id)
   end
 
   def create
     @question = Question.new(question_params)
     if @question.save
-      redirect_to test_question_path(@question.test, @question)
+      redirect_to @question
     else
       render :new
     end
@@ -24,7 +25,7 @@ class QuestionsController < ApplicationController
 
   def update
     if @question.save
-      redirect_to test_question_path(@question.test, @question)
+      redirect_to @question
     else
       render :edit
     end
@@ -32,7 +33,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    redirect_to test_path(@question.test)
+    redirect_to @question.test
   end
 
   private
@@ -47,9 +48,5 @@ class QuestionsController < ApplicationController
 
   def question_params
     params.require(:question).permit(:body, :test_id)
-  end
-
-  def not_found
-    render plain: 'Question was not found'
   end
 end
