@@ -13,10 +13,6 @@ class TestPassage < ApplicationRecord
     save!
   end
 
-  #def position
-  #  test.questions.in_progress.order(:id).where('questions.id <= ?', current_question.id).count
-  #end
-
   def completed?
     current_question.nil?
   end
@@ -32,7 +28,9 @@ class TestPassage < ApplicationRecord
   private
 
   def correct_answer?(answer_ids)
-    correct_answers.ids.sort == answer_ids.map(&:to_i).sort
+    if answer_ids
+      correct_answers.ids.sort == answer_ids.map(&:to_i).sort
+    end
   end
 
   def correct_answers
