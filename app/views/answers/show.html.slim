@@ -3,4 +3,4 @@ p#notice = notice
 p = @answer.body
 p
   => link_to 'Edit', edit_answer_path(@answer)
-  = link_to 'Back', question_path
+  = link_to 'Back', question_path(@answer.question)
