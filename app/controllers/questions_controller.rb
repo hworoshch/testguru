@@ -1,7 +1,6 @@
 class QuestionsController < ApplicationController
   before_action :find_test, only: [:new]
   before_action :find_question, only: [:show, :edit, :update, :destroy]
-  before_action :next_question
 
   def show
   end
