@@ -18,3 +18,12 @@
   color:red; }
 .success {
   color:green; }
+.flash {
+  padding:1rem;
+  border:.25rem solid green;
+  &.alert {
+    border:.25rem solid red; }}
+
+p.header {
+  span {
+    float:right; }}
