@@ -24,6 +24,6 @@ end
 
 users.each do |user|
   Question.all.each do |question|
-    Answer.create({ body: "Answer", correct: rand(2), question_id: question.id, user_id: user.id })
+    Answer.create({ body: "Answer", correct: rand(2), question_id: question.id })
   end
 end

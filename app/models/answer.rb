@@ -1,5 +1,5 @@
 class Answer < ApplicationRecord
-  MAX_ANSWERS = 4
+  MAX_ANSWERS = 7
 
   belongs_to :question
 
@@ -11,6 +11,6 @@ class Answer < ApplicationRecord
   private
 
   def max_count
-    errors.add(:max_count, 'Too many answers') if question.answers.count > MAX_ANSWERS
+    errors.add(:max_count, 'Too many answers') if question && question.answers.count > MAX_ANSWERS
   end
 end
