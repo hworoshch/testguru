@@ -8,6 +8,7 @@ class User < ApplicationRecord
   validates :email, presence: true, 
                     uniqueness: { case_sensitive: false },
                     format: { with: URI::MailTo::EMAIL_REGEXP }
+  before_save :downcase_email
 
   has_secure_password
 
@@ -17,5 +18,9 @@ class User < ApplicationRecord
 
   def by_level(test_level)
     tests.level(test_level)
+  end
+
+  def downcase_email
+    self.email.downcase!
   end
 end
