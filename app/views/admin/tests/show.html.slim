@@ -6,6 +6,7 @@ table
       th
       th
   tbody
-    = render @test.questions
+    /= render @test.questions
+    = render partial: 'questions/question', collection: @test.questions
 hr
 = link_to 'Add question', new_test_question_path(@test)

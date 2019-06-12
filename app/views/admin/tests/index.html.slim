@@ -6,6 +6,9 @@ table
       th Title
       th Level
       th Questions
-      th
+      th{colspan: 2}
   tbody
     = render @tests
+hr
+= link_to 'Add new test', new_admin_test_path
+

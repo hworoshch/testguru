@@ -1,4 +1,4 @@
-= form_for @test, local: true do |f|
+= form_for [:admin, @test], local: true do |f|
   = render 'errors', object: @test
   p
     = f.label :title

@@ -20,10 +20,14 @@
   color:green; }
 .flash {
   padding:1rem;
-  border:.25rem solid green;
   &.alert {
-    border:.25rem solid red; }}
+    border:.25rem solid red; }
+  &.notice {
+    border:.25rem solid green; }}
 
 p.header {
   span {
     float:right; }}
+p.header.admin {
+  padding:1rem;
+  background: deepskyblue; }
