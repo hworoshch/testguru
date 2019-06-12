@@ -1,5 +1,6 @@
 = form_for [:admin, @test], local: true do |f|
   = render 'errors', object: @test
+  = f.hidden_field :author, value: current_user.id
   p
     = f.label :title
     = f.text_field :title

@@ -1,4 +1,6 @@
-= form_for [@test, @question] do |f|
+= question_header(@test)
+h1 Create new question
+= form_for [:admin, @test, @question] do |f|
   = render 'errors', object: @question
   = f.hidden_field :test_id, value: @test.id
   p
