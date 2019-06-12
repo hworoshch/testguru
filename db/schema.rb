@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 2019_06_12_083341) do
     t.integer "category_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "author"
+    t.bigint "author_id"
   end
 
   create_table "users", force: :cascade do |t|
