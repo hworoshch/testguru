@@ -1,14 +1,14 @@
-h1 All tests
+h1 = t('.header')
 table
   thead
     tr
-      th Category
-      th Title
-      th Level
-      th Questions
+      th = t('.category')
+      th = t('.title')
+      th = t('.level')
+      th = t('.questions')
       th{colspan: 2}
   tbody
     = render @tests
 hr
-= link_to 'Add new test', new_admin_test_path
+= link_to t('.add_new'), new_admin_test_path
 
