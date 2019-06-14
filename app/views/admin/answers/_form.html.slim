@@ -1,0 +1,11 @@
+= form_for [:admin, @question, @answer], local: true do |f|
+  = render 'errors', object: @answer
+  p
+    = f.label :body
+    = f.text_area :body
+  p
+    = f.label :correct
+    = f.check_box :correct
+
+
+  .actions = f.submit
