@@ -3,7 +3,9 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
 
   def default_url_options
-    { lang: I18n.locale }
+    options = {}
+    options[:lang] = I18n.locale unless I18n.default_locale == I18n.locale
+    options
   end
 
   protected
@@ -14,7 +16,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    flash[:notice] = "Welcome, #{resource.name} #{resource.lastname}!"
+    flash[:notice] = "#{t('application.header.welcome')}, #{resource.name} #{resource.lastname}!"
     if resource.class == Admin
       admin_tests_path
     elsif resource.class == User

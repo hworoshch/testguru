@@ -1,0 +1,36 @@
+ru:
+  admin:
+    tests:
+      show:
+        add_new: "Добавить вопрос"
+        question: "Вопрос"
+      new:
+        header: "Создание теста"
+      create:
+        success: "Тест создан"
+      index:
+        header: "Доступные тесты"
+        category: "Категория"
+        title: "Название"
+        level: "Уровень"
+        questions: "Кол-во вопросов"
+        add_new: "Добавить тест"
+      edit:
+        header: "Редактирование теста"
+      test:
+        level-easy: "Новичок"
+        level-elementary: "Основной"
+        level-advanced: "Продвинутый"
+        level-advanced: "Сложный"
+        level-hero: "Упоротый"
+    questions:
+      new:
+        header: "Добавить вопрос к тесту %{test}"
+      show:
+        answers: "Ответы"
+        new_answer: "Добавить ответ"
+    answers:
+      new:
+        header: "Добавить ответ"
+        body: "Текст ответа"
+        correct: "Правильный ответ"

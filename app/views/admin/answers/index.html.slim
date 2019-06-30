@@ -1,19 +1,15 @@
-h1 Listing answers
-
+h1 = t('.header')
 table
   thead
     tr
       th
       th
       th
-
   tbody
     - @answers.each do |answer|
       tr
-        td = link_to 'Show', answer
-        td = link_to 'Edit', edit_answer_path(answer)
-        td = link_to 'Destroy', answer, data: { confirm: 'Are you sure?' }, method: :delete
-
+        td = link_to t('application.link.show'), answer
+        td = link_to t('application.link.edit'), edit_answer_path(answer)
+        td = link_to t('application.link.delete'), answer, method: :delete, data: { confirm: t('application.confirm') }
 br
-
-= link_to 'New Answer', new_answer_path
+= link_to t('.add_new'), new_answer_path

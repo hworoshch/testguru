@@ -1,0 +1,27 @@
+en:
+  application:
+    header:
+      welcome: "Welcome"
+      see_all_tests: "All tests"
+      logout: "Logout"
+      login: "Login"
+      signup: "Sign up"
+      admin: "admin panel"
+    link:
+      edit: "Edit"
+      delete: "Delete"
+    confirm: "Are you sure?"
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"

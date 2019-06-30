@@ -1,0 +1,24 @@
+ru:
+  tests:
+    index:
+      header: "Доступные тесты"
+      category: "Категория"
+      title: "Название"
+      level: "Уровень"
+      questions: "Кол-во вопросов"
+    test:
+      start: "Начать"
+      level-easy: "Новичок"
+      level-elementary: "Основной"
+      level-advanced: "Продвинутый"
+      level-advanced: "Сложный"
+      level-hero: "Упоротый"
+  test_passages:
+    show:
+      title: "Прохождение теста %{title}"
+      counter: "Вопрос №"
+      next: "Далее"
+    result:
+      title: "Тест %{title} завершен!"
+      failed: "Тест не пройден!"
+      passed: "Тест пройден!"

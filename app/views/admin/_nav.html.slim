@@ -1,8 +1,9 @@
 p.header.admin
-  => link_to 'TestGuru', root_path
-  ' Admin panel
+  = link_to 'TestGuru', root_path
+  ' :
+  = t('application.header.admin')
   span
     - if user_signed_in?
-      ' Welcome, #{current_user.name} #{current_user.lastname}!
-      => link_to 'See all tests', tests_path
-      = link_to 'Logout', destroy_user_session_path, method: :delete
+      => "#{t('application.header.welcome')}, #{current_user.name} #{current_user.lastname}!"
+      => link_to t('application.header.see_all_tests'), admin_tests_path
+      = link_to t('application.header.logout'), destroy_user_session_path, method: :delete
