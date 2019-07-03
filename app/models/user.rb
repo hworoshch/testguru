@@ -14,4 +14,8 @@ class User < ApplicationRecord
   def by_level(test_level)
     tests.level(test_level)
   end
+
+  def admin?
+    is_a?(Admin)
+  end
 end

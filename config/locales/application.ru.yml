@@ -3,10 +3,10 @@ ru:
     header:
       welcome: "Добро пожаловать"
       see_all_tests: "Список тестов"
+      admin: "Панель управления"
       logout: "Выйти"
       login: "Войти"
       signup: "Зарегистрироваться"
-      admin: "панель управления"
     link:
       edit: "Изменить"
       delete: "Удалить"

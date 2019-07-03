@@ -1,0 +1,22 @@
+.row.justify-content-center.mt-4
+  .col.col-md-4
+    h2 = t('.title')
+    .card.border-primary.mt-4
+      .card-body
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          = render 'errors', object: resource
+          .form-group
+            p
+              = f.label :email
+              = f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control', placeholder: t('.email-placeholder')
+            p
+              = f.label :password
+              = f.password_field :password, autocomplete: "current-password", class: 'form-control'
+          - if devise_mapping.rememberable?
+            .form-check
+              = f.label :remember_me, class: 'form-check-label' do
+                = f.check_box :remember_me, class: 'form-check-input'
+                | Remember me
+          = f.submit t('.submit'), class: 'btn btn-primary mt-3'
+    .mt-1
+      = render "devise/shared/links"

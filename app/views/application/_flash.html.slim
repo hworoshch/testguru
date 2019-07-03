@@ -1,2 +1,3 @@
 -flash.each do |key, message|
-  =content_tag :p, message, class: "flash #{key}"
+  .mt-4 class = flash_class(key)
+    = message

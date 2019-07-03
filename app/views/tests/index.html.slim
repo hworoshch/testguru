@@ -1,11 +1,13 @@
-h1 = t('.header')
-table
-  thead
-    tr
-      th = t('.category')
-      th = t('.title')
-      th = t('.level')
-      th = t('.questions')
-      th
-  tbody
-    = render @tests
+.row.mt-4
+  .col
+    h1 = t('.header')
+    table.table.table-hover.mt-4
+      thead.thead-light
+        tr.text-center
+          th = t('.category')
+          th = t('.title')
+          th = t('.level')
+          th = t('.questions')
+          th
+      tbody
+        = render @tests

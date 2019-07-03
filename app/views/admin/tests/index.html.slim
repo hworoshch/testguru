@@ -1,14 +1,17 @@
-h1 = t('.header')
-table
-  thead
-    tr
-      th = t('.category')
-      th = t('.title')
-      th = t('.level')
-      th = t('.questions')
-      th{colspan: 2}
-  tbody
-    = render @tests
-hr
-= link_to t('.add_new'), new_admin_test_path
+.row.mt-4
+  .col
+    h1 = t('.header')
+    table.table.table-hover.mt-4
+      thead.thead-light
+        tr.text-center
+          th = t('.category')
+          th = t('.title')
+          th = t('.level')
+          th = t('.questions')
+          th
+          th
+      tbody
+        = render @tests
+    hr
+    = link_to t('.add_new'), new_admin_test_path, class: 'btn btn-primary'
 

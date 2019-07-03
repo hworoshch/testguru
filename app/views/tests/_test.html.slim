@@ -1,6 +1,6 @@
 tr
-  td = test.category.title
-  td = test.title
-  td = test_level(test)
-  td = test.questions.count
-  td = button_to t('.start'), start_test_path(test)
+  td.align-middle = test.category.title
+  td.align-middle = test.title
+  td.align-middle.text-center = test_level(test)
+  td.align-middle.text-center = test.questions.count
+  td.align-middle = button_to t('.start'), start_test_path(test), class: 'btn btn-primary'

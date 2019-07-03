@@ -1,4 +1,4 @@
 tr
   td = link_to question.body, admin_question_path(question)
-  td = link_to t('application.link.edit'), edit_admin_question_path(question)
-  td = link_to t('application.link.delete'), admin_question_path(question), method: :delete, data: { confirm: t('application.confirm') }
+  td = link_to t('application.link.edit'), edit_admin_question_path(question), class: 'btn btn-sm btn-primary'
+  td = link_to t('application.link.delete'), admin_question_path(question), method: :delete, data: { confirm: t('application.confirm') }, class: 'btn btn-sm btn-danger'

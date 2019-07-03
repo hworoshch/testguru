@@ -1,8 +1,14 @@
-h1 = t('.title', title: @test_passage.test.title)
-p = "#{t('.counter')} #{ @test_passage.current_question.id} / #{@test_passage.test.questions.count}"
-= @test_passage.current_question.body
-= form_with url: test_passage_path(@test_passage), local: true, method: :put do |f|
-  = f.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |c|
-    = c.check_box id: "answer_ids_#{c.object.id}"
-    = c.label
-  = f.submit t('.next')
+.row.justify-content-center.mt-4
+  .col.col-md-6
+    h1 = t('.title', title: @test_passage.test.title)
+    .card.border-primary.mt-4
+      .card-body
+        p = "#{t('.counter')} #{ @test_passage.current_question.id} / #{@test_passage.test.questions.count}"
+        p = @test_passage.current_question.body
+        = form_with url: test_passage_path(@test_passage), local: true, method: :put do |f|
+          ul.list-group.list-group-flush
+            = f.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |c|
+              li.list-group-item.form-check
+                = c.check_box id: "answer_ids_#{c.object.id}", class: 'form-check-input'
+                = c.label class: 'form-check-label'
+          = f.submit t('.next'), class: 'btn btn-primary mt-3'

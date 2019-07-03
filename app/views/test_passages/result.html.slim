@@ -1,2 +1,4 @@
-h1 = t('.title', title: @test_passage.test.title)
-p = success_percent @test_passage
+.row.justify-content-center.mt-4
+  .col.col-md-6
+    h1 = t('.title', title: @test_passage.test.title)
+    = success_percent @test_passage
