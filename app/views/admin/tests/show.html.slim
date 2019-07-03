@@ -2,11 +2,10 @@ h1 = @test.title
 table
   thead
     tr
-      th Question
+      th = t('.question')
       th
       th
   tbody
     = render @test.questions
-    /= render partial: 'questions/question', collection: @test.questions
 hr
-= link_to 'Add question', new_admin_test_question_path(@test)
+= link_to t('.add_new'), new_admin_test_question_path(@test)

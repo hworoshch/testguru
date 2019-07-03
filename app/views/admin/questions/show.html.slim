@@ -2,14 +2,14 @@ h1 = @question.test.title
 
 p = @question.body
 
-h2 Answers
+h2 = t('.answers')
 
-= link_to 'New answer', new_admin_question_answer_path(@question)
+= link_to t('.new_answer'), new_admin_question_answer_path(@question)
 
 ol
   = render @question.answers
 
 hr
 p 
-  => link_to 'Edit', edit_admin_question_path(@question)
-  = link_to 'Delete', admin_question_path(@question), method: :delete
+  => link_to t('application.link.edit'), edit_admin_question_path(@question)
+  = link_to t('application.link.delete'), admin_question_path(@question), method: :delete, data: { confirm: t('application.confirm') }

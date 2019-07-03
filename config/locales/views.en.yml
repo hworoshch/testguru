@@ -1,0 +1,24 @@
+en:
+  tests:
+    index:
+      header: "All tests"
+      category: "Category"
+      title: "Title"
+      level: "Level"
+      questions: "Questions"
+    test:
+      start: "Start"
+      level-easy: "Easy"
+      level-elementary: "Elementary"
+      level-advanced: "Advanced"
+      level-advanced: "Hard"
+      level-hero: "Hero"
+  test_passages:
+    show:
+      title: "Passing the %{title} test"
+      counter: "Question #"
+      next: "Next"
+    result:
+      title: "The %{title} test was Completed!"
+      failed: "Test failed!"
+      passed: "Test passed!"

@@ -1,0 +1,17 @@
+en:
+  admin:
+    tests:
+      new:
+        header: "New test"
+      create:
+        success: "Test was successfully created"
+      index:
+        header: "All tests"
+      edit:
+        header: "Edit test"
+      test:
+        level-easy: "Easy"
+        level-elementary: "Elementary"
+        level-advanced: "Advanced"
+        level-advanced: "Hard"
+        level-hero: "Hero"
