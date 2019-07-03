@@ -3,6 +3,7 @@ en:
     header:
       welcome: "Welcome"
       see_all_tests: "All tests"
+      admin: "Control panel"
       logout: "Logout"
       login: "Login"
       signup: "Sign up"

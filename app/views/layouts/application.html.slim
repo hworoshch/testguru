@@ -2,22 +2,18 @@ doctype html
 html
   head
     title TestGuru
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    p.header
-      = link_to 'TestGuru', root_path
-      span
-        - if user_signed_in?
-          => "#{t('application.header.welcome')}, #{current_user.name} #{current_user.lastname}!"
-          => link_to t('application.header.see_all_tests'), tests_path
-          = link_to t('application.header.logout'), destroy_user_session_path, method: :delete
-        - else
-          => link_to t('application.header.login'), new_user_session_path
-          = link_to t('application.header.signup'), new_user_registration_path
-    hr
-    = render 'flash'
-    == yield
-    = render 'footer'
+    - if user_signed_in? && current_user.admin?
+        = render 'admin/nav'
+    - else
+      = render 'nav'
+    .container
+      = render 'flash'
+      == yield
+      = render 'footer'

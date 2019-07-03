@@ -1,11 +1,13 @@
-h1 = @test.title
-table
-  thead
-    tr
-      th = t('.question')
-      th
-      th
-  tbody
-    = render @test.questions
-hr
-= link_to t('.add_new'), new_admin_test_question_path(@test)
+.row.mt-4
+  .col
+    h1 = @test.title
+    table.table.table-hover.mt-4
+      thead.thead-light
+        tr.text-center
+          th = t('.question')
+          th
+          th
+      tbody
+        = render @test.questions
+    hr
+    = link_to t('.add_new'), new_admin_test_question_path(@test), class: 'btn btn-primary'

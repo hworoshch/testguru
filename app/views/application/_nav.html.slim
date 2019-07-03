@@ -1,0 +1,12 @@
+nav.navbar.navbar-light.navbar-expand-lg.bg-primary
+  = link_to 'TestGuru', root_path, class: 'navbar-brand'
+  ul.navbar-nav.ml-auto
+    - if user_signed_in?
+      li.nav-item.navbar-text = "#{t('application.header.welcome')}, #{current_user.name} #{current_user.lastname}!"
+      li.nav-item = link_to t('application.header.see_all_tests'), tests_path, class: 'nav-link'
+      li.nav-item = link_to t('application.header.logout'), destroy_user_session_path, method: :delete, class: 'nav-link'
+    - else
+      - if controller_name != 'sessions'
+        li.nav-item = link_to t('application.header.login'), new_user_session_path, class: 'nav-link'
+      - if controller_name != 'registrations'
+        li.nav-item = link_to t('application.header.signup'), new_user_registration_path, class: 'nav-link'

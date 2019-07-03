@@ -1,6 +1,6 @@
 - if object.errors.present?
-  .error
-    h2 = t('.header', count: object.errors.count)
+  .alert.alert-danger role="alert"
+    h4 = t('.header', count: object.errors.count)
     ul
       -object.errors.full_messages.each do |message|
         li = message

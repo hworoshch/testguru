@@ -1,15 +1,11 @@
-h1 = @question.test.title
-
-p = @question.body
-
-h2 = t('.answers')
-
-= link_to t('.new_answer'), new_admin_question_answer_path(@question)
-
-ol
-  = render @question.answers
-
-hr
-p 
-  => link_to t('application.link.edit'), edit_admin_question_path(@question)
-  = link_to t('application.link.delete'), admin_question_path(@question), method: :delete, data: { confirm: t('application.confirm') }
+.row.mt-4
+  .col
+    h1 = @question.test.title
+    p.mt4 = @question.body
+    h2 = t('.answers')
+    = link_to t('.new_answer'), new_admin_question_answer_path(@question), class: 'btn btn-primary'
+    ol.list-group.list-group-flush.mt-3
+      = render @question.answers
+    .mt-3
+      => link_to t('application.link.edit'), edit_admin_question_path(@question), class: 'btn btn-primary'
+      = link_to t('application.link.delete'), admin_question_path(@question), method: :delete, data: { confirm: t('application.confirm') }, class: 'btn btn-danger'

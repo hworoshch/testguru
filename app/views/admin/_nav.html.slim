@@ -1,9 +1,7 @@
-p.header.admin
-  = link_to 'TestGuru', root_path
-  ' :
-  = t('application.header.admin')
-  span
-    - if user_signed_in?
-      => "#{t('application.header.welcome')}, #{current_user.name} #{current_user.lastname}!"
-      => link_to t('application.header.see_all_tests'), admin_tests_path
-      = link_to t('application.header.logout'), destroy_user_session_path, method: :delete
+nav.navbar.navbar-light.navbar-expand-lg.bg-secondary
+  = link_to 'TestGuru', root_path, class: 'navbar-brand justify-content-start'
+  - if user_signed_in?
+    ul.navbar-nav.ml-auto
+      li.nav-item.navbar-text = "#{t('application.header.welcome')}, #{current_user.name} #{current_user.lastname}!"
+      li.nav-item = link_to t('application.header.admin'), admin_tests_path, class: 'nav-link'
+      li.nav-item = link_to t('application.header.logout'), destroy_user_session_path, method: :delete, class: 'nav-link'
