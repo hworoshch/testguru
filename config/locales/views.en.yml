@@ -18,7 +18,13 @@ en:
       title: "Passing the %{title} test"
       counter: "Question #"
       next: "Next"
+      gist_question: "Gist Question"
     result:
       title: "The %{title} test was Completed!"
       failed: "Test failed!"
       passed: "Test passed!"
+    gist:
+      success: "Gist was created!"
+      failure: "An error occurred while saving gist"
+  gist_question:
+    description: "A question about %{title} from TestGuru"

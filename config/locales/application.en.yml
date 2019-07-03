@@ -7,7 +7,7 @@ en:
       logout: "Logout"
       login: "Login"
       signup: "Sign up"
-      admin: "admin panel"
+      gists: "All gists"
     link:
       edit: "Edit"
       delete: "Delete"

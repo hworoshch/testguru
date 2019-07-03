@@ -34,3 +34,8 @@ ru:
         header: "Добавить ответ"
         body: "Текст ответа"
         correct: "Правильный ответ"
+    gists:
+      index:
+        header: "Все gist"
+        question: "Вопрос"
+        user: "Пользователь"

@@ -3,6 +3,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :trackable
   has_many :test_passages
   has_many :tests, through: :test_passages
+  has_many :gists
 
   validates :name, presence: true
   validates :lastname, presence: true
