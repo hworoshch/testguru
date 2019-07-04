@@ -4,8 +4,11 @@
     table.table.table-hover.mt-4
       thead.thead-light
         tr.text-center
+          th.sort-by-title.pointer
+            => t('.title')
+            = octicon 'arrow-up', class: 'text-primary hide'
+            = octicon 'arrow-down', class: 'text-primary hide'
           th = t('.category')
-          th = t('.title')
           th = t('.level')
           th = t('.questions')
           th
