@@ -1,0 +1,11 @@
+.row.mt-4
+  .col
+    h1 = t('.header')
+    table.table.table-hover.mt-4
+      thead.thead-light
+        tr.text-center
+          th = t('.question')
+          th URL
+          th = t('.user')
+      tbody
+        = render @gists

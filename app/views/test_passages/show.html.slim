@@ -11,4 +11,5 @@
               li.list-group-item.form-check
                 = c.check_box id: "answer_ids_#{c.object.id}", class: 'form-check-input'
                 = c.label class: 'form-check-label'
+          => link_to t('.gist_question'), gist_test_passage_path(@test_passage), method: :post, class: 'btn btn-primary mt-3'
           = f.submit t('.next'), class: 'btn btn-primary mt-3'

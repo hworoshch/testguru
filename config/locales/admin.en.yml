@@ -5,13 +5,35 @@ en:
         header: "New test"
       create:
         success: "Test was successfully created"
+      show:
+        add_new: "Add question"
+        question: "Question"
       index:
         header: "All tests"
-      edit:
-        header: "Edit test"
+        category: "Категория"
+        title: "Название"
+        level: "Уровень"
+        questions: "Кол-во вопросов"
+        add_new: "Добавить тест"
       test:
         level-easy: "Easy"
         level-elementary: "Elementary"
         level-advanced: "Advanced"
         level-advanced: "Hard"
         level-hero: "Hero"
+    questions:
+      new:
+        header: "Add question to %{test} test"
+      show:
+        answers: "Answers"
+        new_answer: "Add answer"
+    answers:
+      new:
+        header: "Add answer"
+        body: "Answer body"
+        correct: "Correct answer"
+    gists:
+      index:
+        header: "All gists"
+        question: "Question"
+        user: "User"

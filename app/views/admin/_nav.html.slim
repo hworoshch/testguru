@@ -4,4 +4,5 @@ nav.navbar.navbar-light.navbar-expand-lg.bg-secondary
     ul.navbar-nav.ml-auto
       li.nav-item.navbar-text = "#{t('application.header.welcome')}, #{current_user.name} #{current_user.lastname}!"
       li.nav-item = link_to t('application.header.admin'), admin_tests_path, class: 'nav-link'
+      li.nav-item = link_to t('application.header.gists'), admin_gists_path, class: 'nav-link'
       li.nav-item = link_to t('application.header.logout'), destroy_user_session_path, method: :delete, class: 'nav-link'

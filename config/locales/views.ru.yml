@@ -18,7 +18,13 @@ ru:
       title: "Прохождение теста %{title}"
       counter: "Вопрос №"
       next: "Далее"
+      gist_question: "Создать gist"
     result:
       title: "Тест %{title} завершен!"
       failed: "Тест не пройден!"
       passed: "Тест пройден!"
+    gist:
+      success: "Gist сохранен!"
+      failure: "При сохранении gist возникла ошибка"
+  gist_question:
+    description: "Вопрос про тест %{title} от TestGuru"
