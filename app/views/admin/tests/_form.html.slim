@@ -3,11 +3,11 @@
   = f.hidden_field :author_id, value: current_user.id
   p
     = f.label :title
-    = f.text_field :title
+    = f.text_field :title, class: 'form-control mr-2'
   p
     = f.label :level
-    = f.number_field :level
+    = f.number_field :level, class: 'form-control mr-2'
   p
     = f.label :category_id
-    = f.collection_select :category_id, Category.all, :id, :title, prompt: true
-  =f.submit 
+    = f.collection_select :category_id, Category.all, :id, :title, { prompt: true }, { class: 'form-control' }
+  =f.submit t('.submit'), class: 'btn btn-primary'

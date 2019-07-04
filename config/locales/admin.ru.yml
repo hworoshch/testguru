@@ -17,6 +17,10 @@ ru:
         add_new: "Добавить тест"
       edit:
         header: "Редактирование теста"
+      form:
+        submit: "Сохранить"
+      form_inline:
+        submit: "OK"
       test:
         level-easy: "Новичок"
         level-elementary: "Основной"

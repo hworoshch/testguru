@@ -1,6 +1,7 @@
 .row.mt-4
   .col
     h1 = t('.header')
+    = render 'errors', object: @test
     table.table.table-hover.mt-4
       thead.thead-light
         tr.text-center
@@ -11,6 +12,7 @@
           th = t('.category')
           th = t('.level')
           th = t('.questions')
+          th
           th
           th
       tbody

@@ -15,6 +15,10 @@ en:
         level: "Уровень"
         questions: "Кол-во вопросов"
         add_new: "Добавить тест"
+      form:
+        submit: "Submit"
+      form-inline:
+        submit: "OK"
       test:
         level-easy: "Easy"
         level-elementary: "Elementary"
