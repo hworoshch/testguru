@@ -1,6 +1,6 @@
 tr
-  td.align-middle = test.category.title
   td.align-middle = link_to test.title, admin_test_path(test)
+  td.align-middle = test.category.title
   td.align-middle.text-center = test_level(test)
   td.align-middle.text-center = test.questions.count
   td.align-middle = link_to t('application.link.edit'), edit_admin_test_path(test), class: 'btn btn-sm btn-primary'
