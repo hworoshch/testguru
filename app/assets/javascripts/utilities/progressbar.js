@@ -3,9 +3,7 @@ document.addEventListener('turbolinks:load', function() {
     if (progressData) {
         var questionNumber = progressData.dataset.questionNumber
         var questionsCount = progressData.dataset.questionsCount
-        console.log(questionNumber + ' / ' + questionsCount)
         var progress = (questionNumber / questionsCount) * 100
         progressData.style.width = progress + '%'
-        console.log(progress)
     }
 })
