@@ -25,6 +25,10 @@ class TestPassage < ApplicationRecord
     correct_results >= SUCCESS_PERCENT
   end
 
+  def question_number
+    test.questions.where('questions.id <= ?', current_question.id).count
+  end
+
   private
 
   def correct_answer?(answer_ids)

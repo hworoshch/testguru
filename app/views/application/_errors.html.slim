@@ -1,5 +1,5 @@
-- if object.errors.present?
-  .alert.alert-danger role="alert"
+- if object.present? && object.errors.any?
+  = content_tag :div, class: 'object-errors alert alert-danger', data: { object_id: object.id } do
     h4 = t('.header', count: object.errors.count)
     ul
       -object.errors.full_messages.each do |message|
