@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: testguru_development
+  database: db/testguru_development
   pool: 5
   timeout: 5000
   username: hwo
@@ -10,7 +10,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: testguru_test
+  database: db/testguru_test
   pool: 5
   timeout: 5000
 
