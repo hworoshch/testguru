@@ -11,6 +11,7 @@ en:
     link:
       edit: "Edit"
       delete: "Delete"
+    feedback: "Feedback"
     confirm: "Are you sure?"
     errors:
       header:
