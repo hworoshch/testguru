@@ -2,3 +2,6 @@ ru:
   tests_mailer:
     completed_test:
       subject: "Вы прошли тест на TestGuru!"
+  feedbacks:
+    create:
+      sent: "Ваш отзыв отправлен!"

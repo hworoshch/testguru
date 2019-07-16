@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_03_114821) do
+ActiveRecord::Schema.define(version: 2019_07_05_084739) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,12 +21,21 @@ ActiveRecord::Schema.define(version: 2019_07_03_114821) do
     t.integer "question_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["question_id"], name: "index_answers_on_question_id"
   end
 
   create_table "categories", force: :cascade do |t|
     t.string "title", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "feedbacks", force: :cascade do |t|
+    t.bigint "user_id"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_feedbacks_on_user_id"
   end
 
   create_table "gists", force: :cascade do |t|
@@ -44,6 +53,7 @@ ActiveRecord::Schema.define(version: 2019_07_03_114821) do
     t.integer "test_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["test_id"], name: "index_questions_on_test_id"
   end
 
   create_table "test_passages", force: :cascade do |t|
@@ -65,6 +75,9 @@ ActiveRecord::Schema.define(version: 2019_07_03_114821) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "author_id"
+    t.index ["author_id"], name: "index_tests_on_author_id"
+    t.index ["category_id"], name: "index_tests_on_category_id"
+    t.index ["title", "level"], name: "index_tests_on_title_and_level", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -73,7 +86,6 @@ ActiveRecord::Schema.define(version: 2019_07_03_114821) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email", default: ""
-    t.datetime "confirmed_at"
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -84,6 +96,7 @@ ActiveRecord::Schema.define(version: 2019_07_03_114821) do
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
     t.string "confirmation_token"
+    t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
     t.string "type", default: "User", null: false
@@ -94,6 +107,7 @@ ActiveRecord::Schema.define(version: 2019_07_03_114821) do
     t.index ["type"], name: "index_users_on_type"
   end
 
+  add_foreign_key "feedbacks", "users"
   add_foreign_key "gists", "questions"
   add_foreign_key "gists", "users"
   add_foreign_key "test_passages", "tests"

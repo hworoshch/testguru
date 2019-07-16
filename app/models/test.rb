@@ -1,8 +1,10 @@
 class Test < ApplicationRecord
   belongs_to :category
-  has_many :questions
-  has_many :test_passages
+  has_many :questions, dependent: :destroy
+  has_many :test_passages, dependent: :destroy
   has_many :users, through: :test_passages
+
+  scope :with_questions, -> { includes(:questions).where.not(questions: { id: nil }) }
 
   scope :level, -> (level) { where(level: level) }
   scope :easy, -> { level(0..1) }

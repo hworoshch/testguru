@@ -1,0 +1,11 @@
+.row.justify-content-center.mt-4
+  .col.col-md-4
+    h1 = t('.title')
+    .card.border-primary.mt-4
+      .card-body
+        = form_for @feedback, local: true do |f|
+          = render 'errors', object: @feedback
+          .form-group
+            = f.label :content
+            = f.text_area :content, class: 'form-control'
+          = f.submit t('.submit'), class: 'btn btn-primary'

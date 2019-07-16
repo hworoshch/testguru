@@ -13,6 +13,7 @@ ru:
       delete: "Удалить"
       back: "Назад"
       show: "Показать"
+    feedback: "Обратная связь"
     confirm: "Вы уверены?"
     errors:
       header:

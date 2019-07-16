@@ -28,3 +28,7 @@ en:
       failure: "An error occurred while saving gist"
   gist_question:
     description: "A question about %{title} from TestGuru"
+  feedbacks:
+    new:
+      title: "Feedback"
+      submit: "Send"

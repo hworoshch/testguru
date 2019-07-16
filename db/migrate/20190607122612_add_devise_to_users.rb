@@ -42,7 +42,6 @@ class AddDeviseToUsers < ActiveRecord::Migration[5.2]
     add_index :users, :confirmation_token,   unique: true
     # add_index :users, :unlock_token,         unique: true
 
-    remove_column(:users, :password_digest)
     change_column_default(:users, :email, '')
   end
 
@@ -54,7 +53,6 @@ class AddDeviseToUsers < ActiveRecord::Migration[5.2]
                    :reset_password_sent_at, :remember_created_at, :sign_in_count, :current_sign_in_at,
                    :last_sign_in_at, :current_sign_in_ip,:last_sign_in_ip,:confirmation_token,
                    :confirmation_sent_at, :unconfirmed_email)
-    add_column :users, :password_digest, :string
     remove_index(:users, :email)
     change_column_default(:users, :email, nil)
   end

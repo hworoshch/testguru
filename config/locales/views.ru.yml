@@ -28,3 +28,7 @@ ru:
       failure: "При сохранении gist возникла ошибка"
   gist_question:
     description: "Вопрос про тест %{title} от TestGuru"
+  feedbacks:
+    new:
+      title: "Обратная связь"
+      submit: "Отправить"
