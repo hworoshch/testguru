@@ -6,24 +6,19 @@ document.addEventListener('turbolinks:load', function(){
 })
 
 function startTimer(timerData) {
-    var timeLeft = timerData.dataset.timeLeft
-    var timeStart = (new Date()).getTime()/1000
-    var counterSpan = document.querySelector('#counter')
+    var timer = Math.round(timerData.dataset.timeLeft)
     setTimeout(function updateTimer() {
-        var delta = (new Date()).getTime()/1000 - timeStart
-        var timer = Math.round(timeLeft - delta)
         if (timer > 0) {
-            counterSpan.innerText = timer + ' сек.'
-            setTimeout(updateTimer, 500)
+            setTimer(timer--)
+            setTimeout(updateTimer, 1000)
         } else {
-            setTimeout(submitForm, 500)
+            window.location.href = window.location.href + '/result'
         }
-    }, 500)
+    }, 0)
 }
 
-function submitForm() {
-    var form = document.querySelector('#test-form')
-    if (form) {
-        form.submit()
-    }
+function setTimer(timer) {
+    var counterSpan = document.querySelector('#counter')
+    counterSpan.innerText = timer + ' сек.'
 }
+
