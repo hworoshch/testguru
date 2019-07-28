@@ -29,6 +29,19 @@ class TestPassage < ApplicationRecord
     test.questions.where('questions.id <= ?', current_question.id).count
   end
 
+  def timer
+    test.timer * 60
+  end
+
+  def time_left
+    created_at + timer - Time.current
+  end
+
+  def time_is_over?
+    test.timer.nonzero? && time_left <= 0
+  end
+
+
   private
 
   def correct_answer?(answer_ids)
