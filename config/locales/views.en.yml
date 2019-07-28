@@ -32,3 +32,6 @@ en:
     new:
       title: "Feedback"
       submit: "Send"
+  badges:
+    index:
+      header: "Badges"

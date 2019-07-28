@@ -46,3 +46,15 @@ answers = Answer.create(
      { body: 'Null a Number', correct: false, question_id: questions[8].id },
      { body: 'Not a Number', correct: true, question_id: questions[8].id }]
 )
+
+badge_rules = BadgeRule.create(
+    [{ rule: 'complete_category', value: 'Backend' },
+     { rule: 'first_passage', value: '' },
+     { rule: 'complete_level', value: '1' }]
+)
+
+badges = Badge.create(
+    [{ title: 'Все тесты категории Backend', image: "https://d29fhpw069ctt2.cloudfront.net/icon/image/50661/preview.svg", badge_rule: badge_rules[0] },
+    { title: 'С первой попытки', image: "https://d29fhpw069ctt2.cloudfront.net/icon/image/50660/preview.svg", badge_rule: badge_rules[1] },
+    { title: 'Все тесты первого уровня', image: "https://d29fhpw069ctt2.cloudfront.net/icon/image/50659/preview.svg", badge_rule: badge_rules[2] }]
+)

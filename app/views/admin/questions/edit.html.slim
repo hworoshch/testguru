@@ -1,9 +1,10 @@
-= question_header(@test)
-h1 = t('.header')
-= form_for [:admin, @question] do |f|
-  = render 'errors', object: @question
-  = f.hidden_field :test_id, value: @test.id
-  p
-    = f.label :body
-    = f.text_area :body
-  = f.submit
+.row.justify-content-center.mt-4
+  .col.col-md-6
+    h1.mb-4 = t('.header', test: @test.title)
+    = form_for [:admin, @question] do |f|
+      = render 'errors', object: @question
+      = f.hidden_field :test_id, value: @test.id
+      p
+        = f.label :body
+        = f.text_area :body, class: 'form-control'
+      = f.submit t('.submit'), class: 'btn btn-primary'

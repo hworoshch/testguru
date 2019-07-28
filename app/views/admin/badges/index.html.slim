@@ -1,0 +1,9 @@
+.row.mt-4.mb-4
+  .col
+    h1 = t('.header')
+.row
+  = render @badges
+.row
+  .col
+    hr
+    = link_to t('.add_new'), new_admin_badge_path, class: 'btn btn-primary'

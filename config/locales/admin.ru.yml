@@ -30,6 +30,10 @@ ru:
     questions:
       new:
         header: "Добавить вопрос к тесту %{test}"
+        submit: "Добавить"
+      edit:
+        header: "Редактировать вопрос к тесту %{test}"
+        submit: "Сохранить"
       show:
         answers: "Ответы"
         new_answer: "Добавить ответ"
@@ -38,8 +42,21 @@ ru:
         header: "Добавить ответ"
         body: "Текст ответа"
         correct: "Правильный ответ"
+      form:
+        correct: "Правильный ответ"
+        submit: "Сохранить"
     gists:
       index:
         header: "Все gist"
         question: "Вопрос"
         user: "Пользователь"
+    badges:
+      index:
+        header: "Награды"
+        add_new: "Добавить"
+      new:
+        header: "Добавить награду"
+      edit:
+        header: "Редактировать награду"
+      form:
+        submit: "Сохранить"

@@ -7,7 +7,8 @@ ru:
       logout: "Выйти"
       login: "Войти"
       signup: "Зарегистрироваться"
-      gists: "Список gist"
+      gists: "Gist'ы"
+      badges: "Награды"
     link:
       edit: "Изменить"
       delete: "Удалить"

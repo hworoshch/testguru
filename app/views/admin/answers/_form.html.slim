@@ -2,8 +2,9 @@
   = render 'errors', object: @answer
   p
     = f.label :body
-    = f.text_area :body
-  p
-    = f.label :correct
-    = f.check_box :correct
-  .actions = f.submit
+    = f.text_area :body, class: 'form-control'
+  p.form-check
+    = f.label :correct, class: 'form-check-label' do
+      = f.check_box :correct, class: 'form-check-input'
+      = t('.correct')
+  = f.submit t('.submit'), class: 'btn btn-primary mt-3'

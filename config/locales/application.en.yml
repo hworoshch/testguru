@@ -8,6 +8,7 @@ en:
       login: "Login"
       signup: "Sign up"
       gists: "All gists"
+      badges: "All badges"
     link:
       edit: "Edit"
       delete: "Delete"

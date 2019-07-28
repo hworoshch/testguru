@@ -1,0 +1,12 @@
+= form_for [:admin, @badge], local: true do |f|
+  = render 'errors', object: @badge
+  p
+    = f.label :title
+    = f.text_field :title, class: 'form-control mr-2'
+  p
+    = f.label :image
+    = f.text_field :image, class: 'form-control mr-2'
+  p
+    = f.label :image
+    = f.text_field :image, class: 'form-control mr-2'
+  = f.submit t('.submit'), class: 'btn btn-primary'
