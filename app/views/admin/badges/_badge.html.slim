@@ -1,0 +1,4 @@
+.col-2
+  = image_tag(badge.image, class: 'fit')
+  p = badge.title
+  p = link_to t("application.link.edit"), edit_admin_badge_path(badge)

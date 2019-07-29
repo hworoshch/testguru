@@ -28,6 +28,10 @@ en:
     questions:
       new:
         header: "Add question to %{test} test"
+        submit: "Add"
+      edit:
+        header: "Edit question to %{test} test"
+        submit: "Save"
       show:
         answers: "Answers"
         new_answer: "Add answer"
@@ -36,6 +40,9 @@ en:
         header: "Add answer"
         body: "Answer body"
         correct: "Correct answer"
+      form:
+        correct: "Correct answer"
+        submit: "Save"
     gists:
       index:
         header: "All gists"

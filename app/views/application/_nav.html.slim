@@ -4,6 +4,7 @@ nav.navbar.navbar-light.navbar-expand-lg.bg-primary
     - if user_signed_in?
       li.nav-item.navbar-text = "#{t('application.header.welcome')}, #{current_user.name} #{current_user.lastname}!"
       li.nav-item = link_to t('application.header.see_all_tests'), tests_path, class: 'nav-link'
+      li.nav-item = link_to t('application.header.badges'), badges_path, class: 'nav-link'
       li.nav-item = link_to t('application.header.logout'), destroy_user_session_path, method: :delete, class: 'nav-link'
     - else
       - if controller_name != 'sessions'

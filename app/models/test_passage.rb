@@ -9,7 +9,7 @@ class TestPassage < ApplicationRecord
   before_update :set_next_question
  
   def accept!(answer_ids)
-    self.correct_questions += 1 if correct_answer?(answer_ids)
+    self.correct_questions += 1 if correct_answer?(answer_ids) && !time_is_over?
     save!
   end
 
@@ -27,6 +27,18 @@ class TestPassage < ApplicationRecord
 
   def question_number
     test.questions.where('questions.id <= ?', current_question.id).count
+  end
+
+  def timer
+    test.timer * 60
+  end
+
+  def time_left
+    created_at + timer - Time.current
+  end
+
+  def time_is_over?
+    test.timer.nonzero? && time_left <= 0
   end
 
   private

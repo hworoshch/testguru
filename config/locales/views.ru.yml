@@ -11,7 +11,7 @@ ru:
       level-easy: "Новичок"
       level-elementary: "Основной"
       level-advanced: "Продвинутый"
-      level-advanced: "Сложный"
+      level-hard: "Сложный"
       level-hero: "Упоротый"
   test_passages:
     show:
@@ -32,3 +32,6 @@ ru:
     new:
       title: "Обратная связь"
       submit: "Отправить"
+  badges:
+    index:
+      header: "Награды"
